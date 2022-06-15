@@ -1,0 +1,161 @@
+// ============= JavaScript ===========
+
+//https://learn.javascript.ru
+
+
+// =========  Variables  Переменные ============
+// https://learn.javascript.ru/variables
+
+// let
+// const
+
+let first = 1;
+let second = 2;
+console.log(first);
+console.log(second);
+console.log(first + second);
+
+// var
+
+// ====== Присваивание переменной значения, переприсваивание.
+// console.log();
+
+let third = 3;
+console.log(third);
+third = 7;
+console.log(third);
+
+// ========== Names of variables
+
+// Обязательные правила:
+// 1.  Имя переменной должно содержать только буквы, 
+//     цифры или символы $ и _.
+// 2.  Первый символ не должен быть цифрой.
+// 3.  Нельзя использовать зарезервированные слова (let, var...)
+
+// Необязательные правила, но общепринятые:
+//    Значимое имя
+//    camelCase
+//    english alphabet
+
+
+// =========== Типы данных =======
+
+// string
+// number
+// boolean
+
+//       null
+//       undefined
+//              bigint
+//              symbol
+//       object
+
+
+// typeof(variable)
+
+let num = 1.234;
+let str = "hello";
+console.log(typeof(num));
+console.log(typeof(str));
+
+// ============= string ======
+// string не разделяет отдельные символы и слова
+// Строка (string) в JavaScript должна быть заключена в кавычки.
+
+let str1 = "abc";
+let str2 = 'def';
+let str3 = `ghi`;
+
+// === string concatenation, + 
+
+let concat1 = str1 + str2 + str3;
+let concat2 = str1 + " " + str2 + " " + str3;
+console.log(concat1, concat2);
+
+let name = "Anastasija"; 
+console.log("My name is " + name);
+
+// `${name}`
+
+console.log(`My name is ${name}`);
+
+// ===== длина строки, индекс буквы
+
+// string.length
+
+let string = "This world is beautiful!";
+console.log(string.length);
+
+// index:  
+
+console.log(string[3]);
+
+// string.toLowerCase();
+
+console.log(string.toLowerCase());
+
+// string.toUpperCase();
+
+console.log(string.toUpperCase());
+
+
+// ============= number ======
+// Числовой тип данных (number) представляет как целочисленные значения,
+//  так и числа с плавающей точкой.
+
+// + -  *  /  **  %
+
+let a = 12;
+let b = 3;
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a ** b);
+console.log(a % b);
+
+//   %  часто используется для определения четное / нечетное
+
+console.log(a % 2);
+console.log(b % 2);
+
+// ++  -- 
+
+a++;
+console.log(a);
+b--
+console.log(b);
+
+// ----   NaN    ->   Not a Number
+// NaN означает вычислительную ошибку. Это результат неправильной или 
+// неопределённой математической операции
+
+let newStr1 = "8";
+console.log(a + newStr1);
+console.log(a - newStr1);
+let newStr2 = "abc";
+console.log(b + newStr2);
+console.log(b - newStr2);
+
+// ============= boolean =====
+
+let boolean1 = true;
+let boolean2 = false;
+console.log(boolean1, boolean2);
+
+// ====== сравнение переменных ===
+
+// операторы сравнения ==   ===  !=  !==   >  <   >=  <=  
+
+console.log(4 < 5);
+console.log(4 > 5);
+console.log(a == 5);
+console.log(a === "5");
+
+// ============= Поменять тип данных ==
+
+// --- в string:   '' + num; String(num);
+
+// --- в number:  + str ; Number(str)
+
