@@ -167,3 +167,26 @@ let typeString = "12345";
 let newType2 = +typeString;
 console.log(newType2);
 
+// заданы переменные, найти результаты действий с ними:
+
+let a = "5";
+let b = 10;
+let c = "C";
+let d = 0;
+
+console.log(a + b);    // '510'
+console.log(b + a);    // '105' 
+console.log(a - b);    //  -5 
+console.log(c - d);    //  NaN 
+console.log(a / b);    // 0.5
+console.log(a / c);    //  NaN
+console.log(b / d);    //  Infinity
+console.log(c + d);    //  'C0'
+
+console.log(a + b / d);    // '5Infinity'
+console.log(b + d / a);    // 10
+console.log((b + d) / a);   // 2 
+
+console.log(+a);   // 5
+console.log(+a + b);  // 15
+
