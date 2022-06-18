@@ -157,5 +157,13 @@ console.log(a === "5");
 
 // --- в string:   '' + num; String(num);
 
+let typeNumber = 15;
+let newType1 = '' + typeNumber;
+console.log(newType1);
+
 // --- в number:  + str ; Number(str)
+
+let typeString = "12345";
+let newType2 = +typeString;
+console.log(newType2);
 
