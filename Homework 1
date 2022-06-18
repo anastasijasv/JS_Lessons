@@ -1,0 +1,89 @@
+// Задачи
+
+// 1. Создайте переменные с именами a, b и с, присвойте 
+// переменным любые цифровый значения (целые или дробные).  
+// С помощью переприсваивания переменных увеличьте a на 2, 
+// уменьшите b на 4 и разделите с на 6. Выведите a, b, c в консоль.
+
+let a = 8;
+let b = 13.5;
+let c = 104;
+
+a += 2;
+b -+ 4;
+c /= 6;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+// 2. Объявить переменные для товаров в продуктовом магазине:
+// Вес апельсинов в кг
+// Цена апельсинов за кг
+// Вес яблок, цена за кг
+// Количество пачек печенья, цена за пачку
+// Общая стоимость товара
+// Присвоить всем переменным значения, подсчитать 
+// общую стоимость покупки, Вывести в консоль.
+
+let orangeWeight = 2;
+let orangePrice = 4;
+let appleWeight = 0.7;
+let applePrice = 1.5;
+let cookieNumber = 3;
+let cookiePrice = 2;
+
+let total = orangeWeight * orangePrice + appleWeight * applePrice + cookieNumber * cookiePrice;
+
+console.log(total);
+
+//3.  fix the code
+
+//A.Print the result of the sum
+let a1 = 1;
+let b1 = 2;
+let result;
+result = a1 + b1;
+console.log(result);
+
+//B.Print the result of string concatination
+let name1 = 'Hello';
+let name2 = 'World';
+let str = name1 + " " + name2;
+console.log(str);
+
+//C.Print the result of multiplication 
+let a2 = 4;
+let b2 = 2;
+let multiple = a2 * b2;
+console.log(multiple);
+
+// 4. Объявить переменную, значением которой будет ваше имя. 
+// Объявить переменную со значением Hello World.
+// Сконструировать фразу:
+// Hello World! My name is <имя>.
+// Вывести ее в консоль 
+
+let myName = 'Anastasija';
+let greeting = 'Hello World';
+console.log(`${greeting}! My name is ${myName}`);
+
+// 5. Найти остаток от деления на 5 для чисел: 67; 132; -9; 3
+// Вывести результат в консоль в виде фраз 
+// «остаток от деления 67 на 5 равен <ответ>»
+
+let phrase1 = 'reminder of ';
+let phrase2 = ' to 5 is ';
+let number1 = 67;
+let number2 = 132;
+let number3 = -9;
+let number4 = 3;
+let result1 = number1 % 5;
+let result2 = number2 % 5;
+let result3 = number3 % 5;
+let result4 = number4 % 5;
+
+console.log(phrase1 + number1 + phrase2 + result1);
+console.log(phrase1 + number2 + phrase2 + result2);
+console.log(phrase1 + number3 + phrase2 + result3);
+console.log(phrase1 + number4 + phrase2 + result4);
