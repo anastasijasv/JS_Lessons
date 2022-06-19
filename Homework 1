@@ -87,3 +87,118 @@ console.log(phrase1 + number1 + phrase2 + result1);
 console.log(phrase1 + number2 + phrase2 + result2);
 console.log(phrase1 + number3 + phrase2 + result3);
 console.log(phrase1 + number4 + phrase2 + result4);
+
+//6. Create 5 variables, initialize them with integers and 
+// find the average of variables. Print the result to console
+
+let a = 8;
+let b = 13;
+let c = 121;
+let d = 89;
+let e = 44;
+
+let average = (a + b + c + d + e) / 5;
+
+console.log(average);
+
+//7. Create a variable, initialize it with a positive integer. 
+// Make it negative and print the result to console 
+
+let number = 9;
+console.log(-number);
+
+//8. Write a code that calculates your BMI (Body Mass Index), 
+// where weight=<your_weight_in_kg> and height=<your_height_in_m>. 
+// Print the result to the console.
+// BMI = kg/m2 
+
+let weight = 50;
+let height = 1.70;
+
+let bmi = weight / height ** 2;
+
+console.log(bmi);
+
+//9. Дана сторона куба  5 см. Найти объем куба. Вывести ответ 
+// в виде строки: 
+// Объем куба составляет {вложить полученный результат} см.
+
+let side = 5;
+let size = 5 ** 3;
+
+console.log(`Объем куба составляет ${size} см.`);
+
+//10. Дана строка: "Children can have different hobbies", 
+// вычислить длину этой строки, найти элемент под первым
+// и последним индексом, вывести результаты в консоль. 
+
+let phrase = 'Children can have different hobbies';
+
+console.log(phrase.length);
+console.log(phrase[0]);
+console.log(phrase[34]);
+
+//11. Create a String with a value "208". Convert String to number. 
+// Find the remainder after division by "5". 
+// Output the result to the console.
+
+let string = '208';
+let convert = +string;
+
+console.log(convert);
+console.log(convert % 5);
+
+//12. Напишите скрипт, который считает количество секунд в часе, 
+// в сутках, в месяце. Выведите результат в консоль.
+
+let sec = 1;
+let hour = sec * 60;
+let day = hour * 24;
+let month = day * 30;
+
+console.log(hour);
+console.log(day);
+console.log(month);
+
+//13. Студент решил взять курс. Курс начинается с 1 Сентября по 
+// 31 Декабря. Каждый день студент занимается по 3 часа. 
+// Напишите, сколько всего времени студент потратит на весь курс. 
+// Выведете результат в консоль.
+
+let lesson = 3;
+const september = 30;
+const october = 31;
+const november = 30;
+const december = 31;
+
+let total = (september + october + november + december) * lesson;
+
+console.log(total);
+
+//14. To burn calories for 1 chocolate Marusya needs to run 2km, and 
+// to burn calories for 1 ice cream 5km. How far she has to run if 
+// she breaks her diet by eating 2,5 chocolates and 3 ice creams.
+// Print the distance in the console.
+
+let chocolate = 2.5;
+let chocolateDistance = chocolate * 2;
+let icecream = 3;
+let icecreamDistance = icecream * 5;
+
+let totalDistance = chocolateDistance + icecreamDistance;
+
+console.log(totalDistance);
+
+//15. Elon Mask building Falcon 9 rockets. 
+// The cost of 1 Falcon 9 equal 57 Tesla model X cars. 
+// Trip to the moon requires 13 rockets. 
+// Can you help Elon to figure out how many cars he needs 
+// to sell in order to achieve his goal?
+
+let car = 1;
+let falcon9 = car * 57;
+let falcon9Total = 13;
+
+let carTotal = falcon9 * falcon9Total;
+
+console.log(carTotal);
