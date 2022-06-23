@@ -1,0 +1,85 @@
+// ================== boolean 
+// boolean может принимать только два значения: true (истина)
+// и false (ложь).
+// Булевые значения также могут быть результатом сравнений
+
+let bool1 = (5 < 0); //false
+let bool2 = (5 < 9);  // true
+
+console.log(bool1, bool2);
+
+// ====== сравнение переменных 
+// операторы сравнения ==   ===  !=  !==   >  <   >=  <=  
+
+let a = "5";
+let b = -10;
+let c = "c";
+let C = "C"
+let d = "0";
+
+console.log(a == 5);  // true
+console.log(a === 5); // false
+console.log(b != "-10");  // false
+console.log(b !== "-10"); // true
+console.log(c == "c");   // true
+console.log(c === "c");   // true
+
+// рекомендуется использовать === и !==
+
+console.log(a > 0);   // true
+console.log(b > 0);   // false
+console.log(d > 0);    // false
+console.log(d >= 0);   //  true
+
+console.log("c" > 10000); // false
+console.log(c < 0);   // false
+console.log("c" > "0"); // true
+console.log(c == C);   //  false
+console.log(c > C);  // true
+console.log(c < C);   // false
+
+// При сравнении значений разных типов JavaScript приводит 
+//  каждое из них к числу.
+
+// При сравнении строк, они сравниваются посимвольно
+// Используется кодировка Unicode, а не настоящий алфавит:
+// https://www.tamasoft.co.jp/en/general-info/unicode-decimal.html
+
+console.log('abc' < 'abd');   // true
+console.log('abc' < 'Abc');   // false
+
+// Все операторы сравнения возвращают значение логического типа
+
+let bool3 = a < 0;  // false
+let bool4 = c > C;   // true
+let bool5 = d >= 0;   // true
+    
+console.log(bool3, bool4, bool5);  
+
+// =============== Логические операторы ======
+// https://learn.javascript.ru/logical-operators
+
+//      || (ИЛИ)       && (И)       ! (НЕ)
+
+console.log( true || true );   // true
+console.log( false || true );  // true
+console.log( true || false );  // true
+console.log( false || false ); // false
+
+let massaKg = 70;
+console.log(massaKg < 50 || massaKg > 90);  // false
+console.log(massaKg < 50 || massaKg > 60);  // true
+
+console.log( true && true );   //  true
+console.log( false && true );  //  false
+console.log( true && false );  //  false
+console.log( false && false ); //  false
+
+console.log(massaKg > 50 && massaKg < 90);  // true
+
+console.log(!true);   // false
+console.log(!false);  //  true
+console.log(!(massaKg > 50)); // false
+
+
+// Приоритет оператора И && больше, чем ИЛИ ||, так что он выполняется раньше.
