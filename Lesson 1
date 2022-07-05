@@ -44,12 +44,11 @@ console.log(third);
 // string
 // number
 // boolean
-
-//       null
-//       undefined
-//              bigint
-//              symbol
-//       object
+// null
+// undefined
+// bigint
+// symbol
+// object
 
 
 // typeof(variable)
@@ -99,44 +98,96 @@ console.log(string.toLowerCase());
 
 console.log(string.toUpperCase());
 
+let newString = "Hello";
+newString = newString + " World!";
+newString += " World!";
+console.log(newString);
+
+// string.charCodeAt(index);
+
+console.log("Ggfdjj".charCodeAt(1));
+
+// String.fromCharCode(n);
+
+console.log(String.fromCharCode(103));
+
+// string.repeat(count);
+
+console.log("Abrakadabra!".repeat(3));
+
+// https://www.w3schools.com/jsref/jsref_obj_string.asp
 
 // ============= number ======
 // Числовой тип данных (number) представляет как целочисленные значения,
-//  так и числа с плавающей точкой.
+// так и числа с плавающей точкой.
 
 // + -  *  /  **  %
 
-let a = 12;
-let b = 3;
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
-console.log(a ** b);
-console.log(a % b);
+let x = 12;
+let y = 3;
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x ** y);
+console.log(x % y);
 
-//   %  часто используется для определения четное / нечетное
+// %  часто используется для определения четное / нечетное
 
-console.log(a % 2);
-console.log(b % 2);
+console.log(x % 2);
+console.log(y % 2);
 
 // ++  -- 
 
-a++;
-console.log(a);
-b--
-console.log(b);
+x++;
+console.log(x);
+y--
+console.log(y);
+
+// сокращенная запись действий: +=  -=   *=  /=   %=
+let number = 26;
+number = number + 2;
+number += 2;
+number /= 2;
+console.log(number);
+
+// number.toFixed(x);  x -> Number of decimals
+// возвращает string!
+
+let number1 = 3.456789;
+let number2 = 5;
+console.log(number1.toFixed(2), number2.toFixed(2));
+
+// Math.round(number)  -> математическое округление до целых
+
+var e = Math.round(0.209);   //0
+var f = Math.round(0.909);   //1
+var g = Math.round(5.00789);   //5
+var h = Math.round(5.412345);   //5
+var i = Math.round(-5.10234);   //-5
+var j = Math.round(-5.99999);   //-6
+console.log(e, f, g, h, i, j);
 
 // ----   NaN    ->   Not a Number
 // NaN означает вычислительную ошибку. Это результат неправильной или 
 // неопределённой математической операции
 
 let newStr1 = "8";
-console.log(a + newStr1);
-console.log(a - newStr1);
+console.log(x + newStr1);
+console.log(x - newStr1);
 let newStr2 = "abc";
-console.log(b + newStr2);
-console.log(b - newStr2);
+console.log(y + newStr2);
+console.log(y - newStr2);
+
+// ==== NaN
+//  Проверка, что в данных записан _именно_NaN_:  Number.isNaN();
+
+console.log(null === null);
+console.log(NaN == NaN);
+
+console.log(Number.isNaN("five"));   // false
+console.log(Number.isNaN('a'));   // false
+console.log(Number.isNaN(NaN));   // true
 
 // ============= boolean =====
 
@@ -150,8 +201,8 @@ console.log(boolean1, boolean2);
 
 console.log(4 < 5);
 console.log(4 > 5);
-console.log(a == 5);
-console.log(a === "5");
+console.log(x == 5);
+console.log(x === "5");
 
 // ============= Поменять тип данных ==
 
@@ -166,6 +217,11 @@ console.log(newType1);
 let typeString = "12345";
 let newType2 = +typeString;
 console.log(newType2);
+
+// --- в boolean: !!str;    Boolean(str);
+
+console.log(!!45);
+console.log(Boolean(typeString));
 
 // заданы переменные, найти результаты действий с ними:
 
@@ -188,5 +244,32 @@ console.log(b + d / a);    // 10
 console.log((b + d) / a);   // 2 
 
 console.log(+a);   // 5
-console.log(+a + b);  // 15
+console.log(+a + b);  // 15 
 
+// =================== null ======
+// Специальное значение null формирует отдельный тип, 
+// который содержит только значение null.
+// null -> «ничего», «пусто» или «значение неизвестно».
+
+let z = null;
+console.log(z);
+
+// =================== undefined =====
+// undefined формирует тип из самого себя (так же, как и null,
+// undefined означает, что «значение не было присвоено».
+// Обычно undefined используется для проверок, была ли 
+// переменная назначена.
+
+let s;
+let word = "abcdef";
+console.log(s, word[10]);
+
+// для нестрогого равенства == значений undefined и null 
+// действует особое правило: эти значения ни к чему не приводятся, 
+// они равны друг другу и не равны ничему другому. 
+
+console.log(+null);
+console.log(null == 0);   // false
+console.log(null == undefined);   // true
+console.log(null === undefined);   // false
+console.log(null >= 0);   //  true
