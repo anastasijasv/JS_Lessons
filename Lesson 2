@@ -216,3 +216,17 @@ if (bmi < 18.5) {
 } else {
   console.log('Obesity');
 }
+
+
+// ============ тернарный оператор ======
+
+// можно определить переменную в зависимости от условия:
+// let result = условие ? значение1 : значение2;
+
+let myAge = 38;
+let accessAllowed = myAge > 18 ? true : false;
+console.log(accessAllowed);
+
+// можно выполнить действия в зависимости от условия:
+
+myAge < 18 ? console.log('underage') : console.log('adult');
