@@ -56,6 +56,7 @@ let bool5 = d >= 0;   // true
     
 console.log(bool3, bool4, bool5);  
 
+
 // =============== Логические операторы ======
 // https://learn.javascript.ru/logical-operators
 
@@ -81,5 +82,137 @@ console.log(!true);   // false
 console.log(!false);  //  true
 console.log(!(massaKg > 50)); // false
 
-
 // Приоритет оператора И && больше, чем ИЛИ ||, так что он выполняется раньше.
+
+
+// =============== Условное ветвление: if ... else =======
+
+// выполнить различные действия в зависимости от условий.
+
+// if (condition) {
+// ...<действия>...;   
+// }
+
+// (condition) -> выражение в скобках преобразуется к логическому типу!
+
+let average = 17;
+
+if (average >= 15) {
+  console.log('too much!');
+}
+
+// ---------- else ---
+// у else нет условия!
+
+//Task: check for odd and even
+
+if (average % 2 == 0) {   //if it is true
+  console.log('even');   //print even
+} else {
+  console.log('odd');   //else print odd
+}
+
+//Task: check for adult or not
+
+let age = 18;
+if (age < 18) {
+  console.log('underage');
+} else {
+  console.log('adult');
+}
+
+// -------- else if  -----
+
+//Task: check for open a bar
+
+let helloMsg = '';
+let guest = true;
+let time = 10;
+
+if(guest == false) {
+  helloMsg = 'Welcome!';
+} else if(time >= 10) {
+  helloMsg = 'Open a club!';
+} else {
+  helloMsg = 'We are closed!'
+}
+
+console.log(helloMsg);
+
+if(guest == false) {
+  helloMsg = 'Welcome!';
+    if(time >= 10) {
+      helloMsg = 'Open a club!';
+      }
+} else {
+  helloMsg = 'We are closed!'
+}
+
+console.log(helloMsg);
+
+// Число 0, пустая строка "", null, undefined и NaN становятся false;
+// Остальные значения становятся true.
+
+if (null) {   // false
+  console.log('null');
+}
+
+let data = true;
+if (data) console.log('it is true!');
+
+// https://www.codewars.com/kata/56f6ad906b88de513f000d96/train/javascript
+// Task: Build a function that takes in two arguments (salary, bonus). 
+// Salary will be an integer, and bonus a boolean.
+// If bonus is true, the salary should be multiplied by 10. 
+// If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+
+function bonusTime(salary, bonus) {
+  let result = ' ';
+    if (bonus === true) {
+      salary = salary * 10;
+    }
+  result = '\u00A3' + salary;
+  return result;
+}
+
+// BMI
+// Task: Write a code that calculates your BMI (Body Mass Index), 
+// where weight=<your_weight_in_kg> and height=<your_height_in_m>. 
+// Print the result to the console.
+// BMI = kg/m2 
+
+let weight = 50;
+let height = 1.70;
+let bmi = weight / (height ** 2);
+console.log(bmi);
+
+// BMI Categories:
+// Underweight = less than 18.5
+// Normal weight = 18.5–24.9   // bmi >= 18.5 && bmi <= 24.9
+// Overweight = 25–29.9
+// Obesity = BMI of 30 or greater
+
+// variant 1
+if (bmi < 18.5) {
+  console.log('Underweight');
+} 
+if (bmi >= 18.5 && bmi <= 24.9) {
+  console.log('Normal weight');
+}
+if (bmi >=25 && bmi < 30) {
+  console.log('Overweight');
+} 
+if (bmi >= 30) {
+  console.log('Obesity');
+}
+
+// variant 2
+if (bmi < 18.5) {
+  console.log('Underweight');
+} else if (bmi < 25) {
+  console.log('Normal weight');
+} else if (bmi < 30) {
+  console.log('Overweight');
+} else {
+  console.log('Obesity');
+}
